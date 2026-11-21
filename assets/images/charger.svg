@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+<rect width="300" height="300" rx="28" fill="#e8f3ff"/>
+<path d="M95 85 H205 V205 Q205 220 190 220 H110 Q95 220 95 205 Z M125 85 V55 M175 85 V55 M125 130 H175 M135 165 H165 M215 130 H245 V185 H215" fill="none" stroke="#3483eb" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#3483eb">SẠC NHANH</text>
+</svg>

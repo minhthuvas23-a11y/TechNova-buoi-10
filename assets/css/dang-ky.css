@@ -1,0 +1,131 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .auth-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-box {
+            display: none;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .message-box.error {
+            display: block;
+            background-color: #ffe6e6;
+            color: #d63031;
+            border: 1px solid #fab1a0;
+        }
+
+        .message-box.success {
+            display: block;
+            background-color: #e6fffa;
+            color: #00b894;
+            border: 1px solid #81ecec;
+        }
+
+        h2 {
+            color: #2d3436;
+            font-size: 24px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #636e72;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #2d3436;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            background-color: #5279dc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #7e9be4;
+        }
+
+        .switch-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #636e72;
+        }
+
+        .switch-text a {
+            color: #5279dc;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .switch-text a:hover {
+            text-decoration: underline;
+        }
+/* Đồng bộ màu TechNova, thêm đường về trang chủ và focus bàn phím. */
+body { background: #f4f7fb; }
+.auth-back { display: inline-block; margin-bottom: 20px; color: #0d6efd; text-decoration: none; }
+.auth-demo-note { margin-bottom: 18px; font-size: 13px; line-height: 1.6; color: #636e72; }
+.input-group input:focus { border-color: #0d6efd; outline: 2px solid #b6d4fe; outline-offset: 1px; }
+.btn-submit { background: #0d6efd; }
+.btn-submit:hover { background: #0b5ed7; }
+.switch-text a { color: #0d6efd; }
+@media (max-width: 480px) { .auth-container { padding: 26px 20px; } }

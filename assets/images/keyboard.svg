@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+<rect width="300" height="300" rx="28" fill="#e6f8f0"/>
+<path d="M55 105 H245 Q260 105 260 120 V200 Q260 215 245 215 H55 Q40 215 40 200 V120 Q40 105 55 105 M65 135 H85 M100 135 H120 M135 135 H155 M170 135 H190 M205 135 H225 M65 165 H85 M100 165 H120 M135 165 H155 M170 165 H190 M205 165 H225 M85 195 H215" fill="none" stroke="#18a875" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#18a875">BÀN PHÍM</text>
+</svg>

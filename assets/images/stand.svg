@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+<rect width="300" height="300" rx="28" fill="#ecf9f6"/>
+<path d="M70 80 H230 V165 H70 Z M95 185 H205 M115 165 L95 210 M185 165 L205 210 M75 220 H225" fill="none" stroke="#20a39e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#20a39e">GIÁ ĐỠ</text>
+</svg>

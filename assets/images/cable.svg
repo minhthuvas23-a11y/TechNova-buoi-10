@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+<rect width="300" height="300" rx="28" fill="#fff0f5"/>
+<path d="M55 115 H95 V165 H55 Z M95 140 C125 140 120 220 165 220 C210 220 190 135 225 135 M225 110 H260 V160 H225 Z M65 125 H85 M235 125 H250" fill="none" stroke="#e75480" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#e75480">CÁP TYPE-C</text>
+</svg>

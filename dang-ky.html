@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản - TechNova</title>
+    <link rel="stylesheet" href="assets/css/dang-ky.css">
+</head>
+<body>
+
+    <main class="auth-container"><a class="auth-back" href="index.html">← Về TechNova</a>
+        <!-- Hộp thông báo lỗi hoặc thành công -->
+        <div id="message-box" class="message-box" role="status" aria-live="polite"></div>
+
+        <p class="auth-demo-note">Tài khoản thực hành trên trình duyệt. Không dùng mật khẩu thật.</p><form id="register-form">
+            <h2>Tạo tài khoản mới</h2>
+            <p class="subtitle">Tạo tài khoản demo để thực hành đăng ký và đăng nhập</p>
+
+            <div class="input-group">
+                <label for="reg-name">Họ và tên</label>
+                <input type="text" id="reg-name" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-email">Email</label>
+                <input type="email" id="reg-email" placeholder="Nhập email của bạn" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-password">Mật khẩu</label>
+                <input type="password" id="reg-password" placeholder="Tối thiểu 6 ký tự" minlength="6" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-confirm-password">Xác nhận mật khẩu</label>
+                <input type="password" id="reg-confirm-password" placeholder="Nhập lại mật khẩu" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Đăng Ký</button>
+
+            <p class="switch-text">
+                Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập</a>
+            </p>
+        </form>
+    </main>
+<script src="assets/js/dang-ky.js"></script>
+</body>
+</html>

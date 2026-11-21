@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+<rect width="300" height="300" rx="28" fill="#f0f1ff"/>
+<path d="M65 105 H235 Q250 105 250 120 V195 Q250 210 235 210 H65 Q50 210 50 195 V120 Q50 105 65 105 M75 135 H115 V170 H75 Z M135 135 H165 V170 H135 Z M185 135 H225 V170 H185 Z M250 150 H275" fill="none" stroke="#5964e0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#5964e0">HUB USB-C</text>
+</svg>

@@ -1,0 +1,129 @@
+:root {
+  --tz-primary: #0d6efd;
+  --tz-dark: #172033;
+  --tz-soft: #f4f7fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--tz-dark);
+  background: #fff;
+}
+
+a { text-decoration: none; }
+
+.starter-note {
+  background: #fff3cd;
+  border-bottom: 1px solid #ffe69c;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #eef5ff, #ffffff);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image { max-height: 390px; }
+
+.page-header { background: var(--tz-soft); }
+
+.section-heading { max-width: 680px; margin-inline: auto; }
+
+.product-card,
+.testimonial-card,
+.feature-card,
+.summary-card,
+.form-card {
+  border: 1px solid #e6eaf0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(23, 32, 51, 0.06);
+}
+
+.product-card {
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(23, 32, 51, 0.12);
+}
+
+.product-image {
+  height: 220px;
+  object-fit: contain;
+  padding: 1.5rem;
+  background: var(--tz-soft);
+}
+
+.detail-image-box {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background: var(--tz-soft);
+}
+
+.detail-image-box img { max-height: 420px; }
+
+.quantity-box { max-width: 190px; }
+.quantity-box input { max-width: 80px; }
+
+.cart-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--tz-soft);
+}
+
+.cart-quantity { width: 85px; }
+.faq-container { max-width: 850px; }
+
+.site-footer {
+  background: #172033;
+  color: #fff;
+}
+
+.site-footer a { color: #d7deea; }
+.site-footer a:hover { color: #fff; }
+
+.cta-section {
+  max-width: 850px;
+  margin-inline: auto;
+  color: #fff;
+  background: var(--tz-primary);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.cta-section:hover { background: #0b5ed7; }
+
+/* TODO CSS 01: Tạo class .cta-section với nền màu chủ đạo và chữ trắng. (Done) */
+/* TODO CSS 02: Thay màu chủ đạo bằng màu riêng của học sinh. (Done) */
+/* TODO CSS 03: Tạo hiệu ứng hover cho các nút mạng xã hội ở Footer. (Done) */
+
+@media (max-width: 767.98px) {
+  .hero-section { min-height: auto; text-align: center; }
+  .hero-image { max-height: 280px; }
+  .display-5 { font-size: 2.2rem; }
+  .padding-5 { padding: 3rem 1rem; }
+  /* TODO CSS 04: Điều chỉnh padding hoặc font-size cho điện thoại. */
+}
+
+/* Chỉnh UI cơ bản: menu gọn, card đều, trang ngắn vẫn có footer ở dưới. */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.navbar-brand img { width: 130px; height: 58px; object-fit: contain; }
+.navbar-brand { margin-right: 1rem; }
+.navbar .navbar-nav { row-gap: .5rem; }
+.catalog-toolbar { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.25rem; }
+.catalog-search { flex: 1 1 260px; max-width: 460px; }
+.product-title, .product-description { overflow-wrap: anywhere; }
+.product-description { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+[hidden] { display: none !important; }
+@media (max-width: 991.98px) { .navbar-collapse { padding: 1rem 0; } }
+@media (prefers-reduced-motion: reduce) { .product-card { transition: none; } }
