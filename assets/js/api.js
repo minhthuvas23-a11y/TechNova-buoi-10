@@ -21,5 +21,18 @@ async function fetchProducts() {
   return data.products;
 }
 
-// TODO HS 01: Viết fetchProductById(id) cho GET /products/{id}.
-// Gợi ý: endpoint chi tiết trả MỘT object, không có data.products.
+// Chi tiết trả MỘT object, không dùng data.products như endpoint danh sách.
+async function fetchProductById(id) {
+  if (!/^[1-9]\d{0,7}$/.test(String(id))) {
+    throw new Error("ID sản phẩm không hợp lệ. Hãy chọn lại từ danh sách.");
+  }
+  const response = await fetch(`${API_CONFIG.BASE_URL}/products/${id}`);
+  if (!response.ok) {
+    throw new Error(response.status === 404 ? "Không tìm thấy sản phẩm này." : `Không tải được chi tiết (HTTP ${response.status}).`);
+  }
+  const product = await response.json();
+  if (!product || product.id !== Number(id) || typeof product.title !== "string" || !Number.isFinite(product.price)) {
+    throw new Error("Dữ liệu chi tiết sản phẩm không hợp lệ.");
+  }
+  return product;
+}
