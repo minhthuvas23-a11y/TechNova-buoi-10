@@ -5,6 +5,7 @@ const productList = document.querySelector("#product-list");
 const productStatus = document.querySelector("#product-status");
 const productSearch = document.querySelector("#product-search");
 const retryButton = document.querySelector("#retry-products");
+const sortSelect = document.querySelector("#product-sort");
 let products = []; // Dữ liệu gốc từ API; tìm kiếm không làm thay đổi mảng này.
 let isLoading = false;
 
@@ -34,10 +35,9 @@ function createProductCard(product) {
 
   // Giữ ID trên card để học sinh dùng khi thêm trang chi tiết hoặc giỏ hàng.
   card.querySelector(".product-item").dataset.id = product.id;
-  // TODO HS 02: Thêm link product-detail.html?id=... sau khi làm chi tiết động.(Done)
+  // Trang chi tiết đọc ID này và gọi GET /products/{id}.
   let detailLink = card.querySelector(".product-detail-link");
   detailLink.href = `product-detail.html?id=${product.id}`;
-  // Chưa nối vào 10 trang chi tiết tĩnh vì đó là các sản phẩm khác với API.
   return card;
 }
 
@@ -45,6 +45,9 @@ function createProductCard(product) {
 function renderProducts() {
   const keyword = productSearch.value.trim().toLowerCase();
   const visibleProducts = products.filter(product => product.title.toLowerCase().includes(keyword));
+  // Sắp xếp trước khi render; chỉ đăng ký sự kiện change MỘT lần ở cuối file.
+  if (sortSelect.value === "price-asc") visibleProducts.sort((a, b) => a.price - b.price);
+  if (sortSelect.value === "price-desc") visibleProducts.sort((a, b) => b.price - a.price);
 
   productList.replaceChildren();
   visibleProducts.forEach(product => productList.append(createProductCard(product)));
@@ -53,17 +56,6 @@ function renderProducts() {
     ? `Hiển thị ${visibleProducts.length} sản phẩm`
     : "Không tìm thấy sản phẩm phù hợp.";
 
-  // TODO HS 03: Thêm select sắp xếp giá và xử lý visibleProducts.sort(...).(Done)
-  sortSelect.addEventListener("change", () => {
-    const sortValue = sortSelect.value;
-    if (sortValue === "price-asc") {
-      visibleProducts.sort((a, b) => a.price - b.price);
-    } else if (sortValue === "price-desc") {
-      visibleProducts.sort((a, b) => b.price - a.price);
-    }
-    productList.replaceChildren();
-    visibleProducts.forEach(product => productList.append(createProductCard(product)));
-  });
 }
 
 // BƯỚC 6: Nối API với UI, có đủ trạng thái tải / thành công / lỗi.
@@ -93,15 +85,9 @@ async function loadProducts() {
 
 // BƯỚC 7: Đăng ký sự kiện, rồi tải dữ liệu lần đầu.
 productSearch.addEventListener("input", renderProducts);
+sortSelect.addEventListener("change", renderProducts);
 retryButton.addEventListener("click", loadProducts);
 loadProducts();
 
-// TODO HS 04: Dùng lại fetchProducts để render 4 sản phẩm nổi bật trên index.html.(Done)
-fetchProducts().then(products => {
-  const featuredList = document.querySelector("#featured-list");
-  products.slice(0, 4).forEach(product => {
-    featuredList.append(createProductCard(product));
-  });
-});
-// TODO HS 05: Làm giỏ localStorage theo ID + quantity, rồi validate checkout.(Done)
-createCartFromLocalStorage();
+// TODO HS: Trang chủ cần file home.js riêng. Không chạy code cho #featured-list
+// hoặc gọi hàm giỏ chưa viết ở đây vì products.html không có các vùng đó.

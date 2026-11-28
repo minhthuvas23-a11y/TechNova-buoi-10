@@ -140,3 +140,17 @@ Phân biệt: API sản phẩm mới dùng giá USD; các trang chi tiết/giỏ
 3. Nối giỏ localStorage và validate cơ bản; tự kiểm tra theo bảng trên.
 
 Mỗi bước làm xong phải chạy thử trước khi chuyển sang bước kế tiếp. Không cần hoàn thiện toàn bộ shop ngay trong buổi đầu.
+
+## Trang chi tiết API đã có
+
+Đọc theo thứ tự `config.js` → `api.js` (`fetchProductById`) → `product-detail.html`
+(template) → `assets/js/product-detail.js`.
+
+Luồng: card trên `products.html` → `product-detail.html?id=ID` → kiểm tra ID →
+GET `/products/{id}` → kiểm tra HTTP/JSON → điền template bằng `textContent`.
+Chi tiết nhận một object, không có `data.products`. Refresh vẫn fetch lại đúng ID.
+
+Đã sửa sắp xếp danh sách và các lời gọi hàm chưa tồn tại. Giỏ/checkout và sản phẩm
+nổi bật trang chủ vẫn cần học sinh nối API. Đọc `NOTE_REVIEW_CUA_THAY.txt` để xem
+trạng thái hiện tại; checklist chi tiết API ở phần hướng dẫn cũ phía trên là bước
+đã được làm mẫu, không phải việc còn thiếu.

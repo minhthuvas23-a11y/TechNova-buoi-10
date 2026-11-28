@@ -1,4 +1,4 @@
-﻿# Ghi chú review và bàn giao cho học sinh
+# Ghi chú review và bàn giao cho học sinh
 
 **Ngày review:** 19/11/2026  
 **Project:** TechNova — website phụ kiện điện tử  
@@ -17,8 +17,6 @@
 | `about.html` | Thay ảnh thành viên không tồn tại bằng `assets/images/avatar.svg` có sẵn; cập nhật menu. |
 | `index.html`, `contact.html`, `checkout.html`, `faq.html` | Thay ô tìm kiếm trên menu chưa có xử lý bằng liên kết Đăng nhập. Nội dung và logic chính của các trang này chưa chuyển sang API. |
 | Các trang chi tiết tĩnh | Sẽ loại bỏ khi hoàn thiện luồng API, không cần duy trì hay xử lý tương thích. Chỉ dùng một trang chi tiết động fetch theo ID. |
-| `STUDENT_TASKS.md` | Bổ sung checklist giai đoạn API, phân biệt việc đã làm mẫu và bài tập còn lại. |
-| `README.md` | Bổ sung cách chạy và đường dẫn tới hướng dẫn bắt đầu. |
 
 ## 2. Các file mới được tạo
 
@@ -124,4 +122,4 @@ Các kiểm tra trên **không thay thế kiểm tra trực quan trên trình du
 4. API công khai này cung cấp dữ liệu mẫu; không phải giá/tồn kho của cửa hàng thật.
 5. Không cần làm tất cả cùng lúc: hoàn thành và chạy thử một ưu tiên rồi mới chuyển sang ưu tiên kế tiếp.
 
-Đọc hướng dẫn chi tiết trong **[HUONG_DAN_BAT_DAU.md](HUONG_DAN_BAT_DAU.md)** và đối chiếu **[STUDENT_TASKS.md](STUDENT_TASKS.md)** khi đánh dấu tiến độ.
+Đọc hướng dẫn chi tiết trong **[HUONG_DAN_BAT_DAU.md](HUONG_DAN_BAT_DAU.md)**.
